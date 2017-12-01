@@ -1,0 +1,28 @@
+#sortable-fields {}
+#sortable-pos {}
+
+.positions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    min-height: 35px;
+    background-color: #f0f0f0;
+    border: 1px dashed silver;
+    overflow: hidden;
+    width: 100%;
+    font-size: 16px;
+}
+
+.positions li{
+    display: block;
+    width: 35px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 1px solid silver;
+    float: left;
+    margin: 2px;
+    text-align: center;
+    padding-top: 8px;
+    cursor: move;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<extension type="component" version="3.0.0" method="upgrade">
+    <name>com_froala</name>
+    <author>Arkadiy Sedelnikov, JoomLine</author>
+    <authorEmail>a.sedelnikov@gmail.com</authorEmail>
+    <authorUrl>http://joomline.ru</authorUrl>
+    <copyright>Arkadiy Sedelnikov, JoomLine</copyright>
+    <license>GNU/GPL v.3 or later</license>
+    <version>2.2</version>
+    <description>COM_FROALA_DESC</description>
+    <creationDate>06 May 2015</creationDate>
+    <files folder="site">
+        <folder>helpers</folder>
+        <filename>controller.php</filename>
+        <filename>froala.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+	<update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    <administration>
+        <menu>COM_FROALA</menu>
+        <files folder="admin">
+            <folder>assets</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>froala.php</filename>
+            <filename>index.html</filename>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_froala.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_froala.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_froala.sys.ini</language>
+            <language tag="ru-RU">language/ru-RU/ru-RU.com_froala.sys.ini</language>
+        </languages>
+    </administration>
+	<updateservers><server type="extension" priority="1" name="Joomline">http://joomline.net/index.php?option=com_ars&amp;view=update&amp;task=stream&amp;format=xml&amp;id=11&amp;dummy=extension.xml</server></updateservers>
+</extension>
+

@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<form>
+    <fields>
+        <field name="title"
+               type="text"
+               label="JGLOBAL_TITLE"
+               description="JFIELD_TITLE_DESC"
+               required="true"
+               class="inputbox"
+               size="40"
+                />
+        <field
+                name="description"
+                type="textarea"
+                label="JGLOBAL_DESCRIPTION"
+                description="JGLOBAL_DESCRIPTION"
+                size="100"
+                class="inputbox input-xxlarge"
+				rows="1"
+                />
+
+
+
+        <fieldset name="default" label="COM_FROALA_MAIN_TAB">
+
+            <field name="id"
+                   type="text"
+                   default="0"
+                   label="JGLOBAL_FIELD_ID_LABEL"
+                   readonly="true"
+                    />
+            <field
+                    name="published"
+                    type="list"
+                    label="JSTATUS"
+                    description="JFIELD_PUBLISHED_DESC"
+                    class="chzn-color-state"
+                    filter="intval"
+                    size="1"
+                    default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field>
+
+            <field
+                    name="default"
+                    type="list"
+                    label="JDEFAULT"
+                    description="JDEFAULT"
+                    class="chzn-color-state"
+                    filter="intval"
+                    size="1"
+                    default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="user_groups"
+                    type="usergrouplist"
+                    default="2"
+                    multiple="true"
+                    label="COM_FROALA_USER_GROUPS"
+                    description="COM_FROALA_USER_GROUPS_DESC">
+            </field>
+
+        </fieldset>
+
+        <fieldset name="paths" label="COM_FROALA_PATHS_FIELDSET">
+            <field
+                    name="images_load_url"
+                    type="text"
+                    label="COM_FROALA_IMAGELOADURL"
+                    description="COM_FROALA_IMAGELOADURL_DESC"
+                    class="inputbox"
+                    default="images/{userId}"
+                    />
+            <field
+                    name="files_upload_url"
+                    type="text"
+                    label="COM_FROALA_FILESUPLOADURL"
+                    description="COM_FROALA_FILESUPLOADURL_DESC"
+                    class="inputbox"
+                    default="images/{userId}"
+                    />
+        </fieldset>
+
+
+
+        <fieldset name="permissions" label="COM_FROALA_PERMISSIONS_FIELDSET">
+            <field
+                    name="sanitize_url"
+                    type="radio"
+                    label="COM_FROALA_SANITIZE_URL"
+                    description="COM_FROALA_SANITIZE_URL_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="disable_right_click"
+                    type="radio"
+                    label="COM_FROALA_DISABLE_RIGHT_CLICK"
+                    description="COM_FROALA_DISABLE_RIGHT_CLICK_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="paragraphy"
+                    type="radio"
+                    label="COM_FROALA_PARAGRAPHY"
+                    description="COM_FROALA_PARAGRAPHY_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="plain_paste"
+                    type="radio"
+                    label="COM_FROALA_PLAINPASTE"
+                    description="COM_FROALA_PLAINPASTE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="convert_urls"
+                    type="radio"
+                    label="COM_FROALA_CONVERTURLS"
+                    description="COM_FROALA_CONVERTURLS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="allow_media_manager"
+                    type="radio"
+                    label="COM_FROALA_MEDIA_MANAGER"
+                    description="COM_FROALA_MEDIA_MANAGER_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JON</option>
+                <option value="0">JOFF</option>
+            </field>
+            <field
+                    name="allow_comments"
+                    type="radio"
+                    label="COM_FROALA_ALLOWCOMMENTS"
+                    description="COM_FROALA_ALLOWCOMMENTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="allow_script"
+                    type="radio"
+                    label="COM_FROALA_ALLOWSCRIPT"
+                    description="COM_FROALA_ALLOWSCRIPT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="allow_style"
+                    type="radio"
+                    label="COM_FROALA_ALLOWSTYLE"
+                    description="COM_FROALA_ALLOWSTYLE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="shortcuts"
+                    type="radio"
+                    label="COM_FROALA_SHORTCUTS"
+                    description="COM_FROALA_SHORTCUTS_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="resize_editor"
+                    type="radio"
+                    label="COM_FROALA_RESIZE_EDITOR"
+                    description="COM_FROALA_RESIZE_EDITOR_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="store_resize_height"
+                    type="radio"
+                    label="COM_FROALA_STORE_RESIZE_HEIGHT"
+                    description="COM_FROALA_STORE_RESIZE_HEIGHT_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="store_resize_days"
+                    type="text"
+                    label="COM_FROALA_STORE_RESIZE_DAYS"
+                    description="COM_FROALA_STORE_RESIZE_DAYS_DESC"
+                    class="inputbox"
+                    default="365"
+                    filter="intval"
+                    />
+
+            <field
+                    name="allowed_attrs"
+                    type="list"
+                    label="COM_FROALA_ALLOWEDATTRS"
+                    description="COM_FROALA_ALLOWEDATTRS_DESC"
+                    class="inputbox"
+                    multiple="true"
+                    default="*"
+                    >
+                <option value="*">JALL</option>
+                <option value="accept">accept</option>
+                <option value="accept-charset">accept-charset</option>
+                <option value="accesskey">accesskey</option>
+                <option value="action">action</option>
+                <option value="align">align</option>
+                <option value="alt">alt</option>
+                <option value="async">async</option>
+                <option value="autocomplete">autocomplete</option>
+                <option value="autofocus">autofocus</option>
+                <option value="autoplay">autoplay</option>
+                <option value="autosave">autosave</option>
+                <option value="background">background</option>
+                <option value="bgcolor">bgcolor</option>
+                <option value="border">border</option>
+                <option value="charset">charset</option>
+                <option value="cellpadding">cellpadding</option>
+                <option value="cellspacing">cellspacing</option>
+                <option value="checked">checked</option>
+                <option value="cite">cite</option>
+                <option value="class">class</option>
+                <option value="color">color</option>
+                <option value="cols">cols</option>
+                <option value="colspan">colspan</option>
+                <option value="content">content</option>
+                <option value="contenteditable">contenteditable</option>
+                <option value="contextmenu">contextmenu</option>
+                <option value="controls">controls</option>
+                <option value="coords">coords</option>
+                <option value="data">data</option>
+                <option value="data-.*">data-.*</option>
+                <option value="datetime">datetime</option>
+                <option value="default">default</option>
+                <option value="defer">defer</option>
+                <option value="dir">dir</option>
+                <option value="dirname">dirname</option>
+                <option value="disabled">disabled</option>
+                <option value="download">download</option>
+                <option value="draggable">draggable</option>
+                <option value="dropzone">dropzone</option>
+                <option value="enctype">enctype</option>
+                <option value="for">for</option>
+                <option value="form">form</option>
+                <option value="formaction">formaction</option>
+                <option value="headers">headers</option>
+                <option value="height">height</option>
+                <option value="hidden">hidden</option>
+                <option value="high">high</option>
+                <option value="href">href</option>
+                <option value="hreflang">hreflang</option>
+                <option value="http-equiv">http-equiv</option>
+                <option value="icon">icon</option>
+                <option value="id">id</option>
+                <option value="ismap">ismap</option>
+                <option value="itemprop">itemprop</option>
+                <option value="keytype">keytype</option>
+                <option value="kind">kind</option>
+                <option value="label">label</option>
+                <option value="lang">lang</option>
+                <option value="language">language</option>
+                <option value="list">list</option>
+                <option value="loop">loop</option>
+                <option value="low">low</option>
+                <option value="max">max</option>
+                <option value="maxlength">maxlength</option>
+                <option value="media">media</option>
+                <option value="method">method</option>
+                <option value="min">min</option>
+                <option value="multiple">multiple</option>
+                <option value="name">name</option>
+                <option value="novalidate">novalidate</option>
+                <option value="open">open</option>
+                <option value="optimum">optimum</option>
+                <option value="pattern">pattern</option>
+                <option value="ping">ping</option>
+                <option value="placeholder">placeholder</option>
+                <option value="poster">poster</option>
+                <option value="preload">preload</option>
+                <option value="pubdate">pubdate</option>
+                <option value="radiogroup">radiogroup</option>
+                <option value="readonly">readonly</option>
+                <option value="rel">rel</option>
+                <option value="required">required</option>
+                <option value="reversed">reversed</option>
+                <option value="rows">rows</option>
+                <option value="rowspan">rowspan</option>
+                <option value="sandbox">sandbox</option>
+                <option value="scope">scope</option>
+                <option value="scoped">scoped</option>
+                <option value="scrolling">scrolling</option>
+                <option value="seamless">seamless</option>
+                <option value="selected">selected</option>
+                <option value="shape">shape</option>
+                <option value="size">size</option>
+                <option value="sizes">sizes</option>
+                <option value="span">span</option>
+                <option value="src">src</option>
+                <option value="srcdoc">srcdoc</option>
+                <option value="srclang">srclang</option>
+                <option value="srcset">srcset</option>
+                <option value="start">start</option>
+                <option value="step">step</option>
+                <option value="summary">summary</option>
+                <option value="spellcheck">spellcheck</option>
+                <option value="style">style</option>
+                <option value="tabindex">tabindex</option>
+                <option value="target">target</option>
+                <option value="title">title</option>
+                <option value="type">type</option>
+                <option value="translate">translate</option>
+                <option value="usemap">usemap</option>
+                <option value="value">value</option>
+                <option value="valign">valign</option>
+                <option value="width">width</option>
+                <option value="wrap">wrap</option>
+            </field>
+            <field
+                    name="allowed_tags"
+                    type="textarea"
+                    label="COM_FROALA_ALLOWEDTAGS"
+                    description="COM_FROALA_ALLOWEDTAGS_DESC"
+                    class="inputbox"
+                    default=""
+					rows="1"
+                    />
+            <field
+                    name="allowed_blank_tags"
+                    type="textarea"
+                    label="COM_FROALA_ALLOWEDBLANKTAGS"
+                    description="COM_FROALA_ALLOWEDBLANKTAGS_DESC"
+                    class="inputbox"
+                    default=""
+					rows="1"
+                    />
+
+            <field
+                    name="max_file_size"
+                    type="text"
+                    label="COM_FROALA_MAXFILESIZE"
+                    description="COM_FROALA_MAXFILESIZE_DESC"
+                    class="inputbox"
+                    default="2"
+                    />
+            <field
+                    name="max_image_size"
+                    type="text"
+                    label="COM_FROALA_MAXIMAGESIZE"
+                    description="COM_FROALA_MAXIMAGESIZE_DESC"
+                    class="inputbox"
+                    default="2"
+                    />
+            <field
+                    name="paste_image"
+                    type="radio"
+                    label="COM_FROALA_PASTEIMAGE"
+                    description="COM_FROALA_PASTEIMAGE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="image_upload"
+                    type="radio"
+                    label="COM_FROALA_IMAGEUPLOAD"
+                    description="COM_FROALA_IMAGEUPLOAD_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                    name="image_delete"
+                    type="radio"
+                    label="COM_FROALA_IMAGEDELETE"
+                    description="COM_FROALA_IMAGEDELETE_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="file_upload"
+                    type="radio"
+                    label="COM_FROALA_FILEUPLOAD"
+                    description="COM_FROALA_FILEUPLOAD_DESC"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+
+            <field
+                    name="allowed_image_types"
+                    type="textarea"
+                    label="COM_FROALA_ALLOWEDIMAGETYPES"
+                    description="COM_FROALA_ALLOWEDIMAGETYPES_DESC"
+                    class="inputbox"
+                    default="jpeg, jpg, png, gif"
+					rows="1"
+                    />
+            <field
+                    name="allowed_file_ext"
+                    type="textarea"
+                    label="COM_FROALA_ALLOWEDFILEEXT"
+                    description="COM_FROALA_ALLOWEDFILEEXT_DESC"
+                    class="inputbox"
+                    default="zip,doc,xls,xlsx,docx"
+					rows="1"
+                    />
+            <field
+                    name="allowed_file_types"
+                    type="textarea"
+                    label="COM_FROALA_ALLOWEDFILETYPES"
+                    description="COM_FROALA_ALLOWEDFILETYPES_DESC"
+                    class="inputbox"
+                    default="image/jpeg,image/gif,image/png,image/bmp,application/x-shockwave-flash,application/msword,application/excel,application/pdf,application/powerpoint,text/plain,application/x-zip,application/zip,application/x-zip-compressed"
+					rows="1"
+                    />
+
+        </fieldset>
+
+        <fieldset name="buttons" label="COM_FROALA_BUTTONS_FIELDSET" addfieldpath="administrator/components/com_froala/models/fields">
+            <field
+                    name="buttons"
+                    type="buttons"
+                    multiple="true"
+                    label="COM_FROALA_BUTTONS"
+                    description="COM_FROALA_BUTTONS_DESC"
+                    default=""
+                    />
+        </fieldset>
+
+    </fields>
+</form>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors" method="upgrade">
+    <name>COM_FROALA</name>
+    <version>2.1</version>
+    <creationDate>2015</creationDate>
+    <author>Arkadiy</author>
+    <authorEmail>a.sedelnikov@gmail.com</authorEmail>
+    <authorUrl>argens.ru</authorUrl>
+    <copyright>Arkadiy Sedelnikov</copyright>
+    <license>GPL</license>
+    <description>COM_FROALA_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <folder>assets</folder>
+        <filename>index.html</filename>
+        <filename plugin="froala">froala.php</filename>
+    </files>
+    <languages folder="language">
+        <language tag="ru-RU">ru-RU/ru-RU.plg_editors_froala.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.plg_editors_froala.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_editors_froala.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_editors_froala.sys.ini</language>
+    </languages>
+</extension>

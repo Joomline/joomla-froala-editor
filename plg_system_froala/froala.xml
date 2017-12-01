@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>Editor Froala</name>
+    <version>2.1</version>
+    <creationDate>2015</creationDate>
+    <author>Arkadiy Sedelnikov, JoomLine</author>
+    <authorEmail>a.sedelnikov@gmail.com</authorEmail>
+    <authorUrl>http://joomline.ru</authorUrl>
+    <copyright>Arkadiy Sedelnikov</copyright>
+    <license>GNU/GPL v.3 or later.</license>
+    <description>Editor Froala plugin. Add to frontpages custom Froala stylesheet.</description>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <filename>index.html</filename>
+        <filename>script.php</filename>
+        <filename plugin="froala">froala.php</filename>
+    </files>
+
+</extension>

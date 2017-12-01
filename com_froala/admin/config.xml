@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<config>
+    <fieldset name="global" label="JGLOBAL_FIELDSET_OPTIONS">
+
+        <field
+                name="secret_key"
+                type="text"
+                label="COM_FROALA_SECRET_KEY"
+                description="COM_FROALA_SECRET_KEY_DESC"
+                default=""
+                />
+        <field
+                name="default_image_width"
+                type="text"
+                label="COM_FROALA_DEFAULT_IMAGE_WIDTH"
+                description="COM_FROALA_DEFAULT_IMAGE_WIDTH_DESC"
+                filter="integer"
+                default="300"
+                />
+        <field
+                name="theme"
+                type="radio"
+                label="COM_FROALA_COLOR_THEME"
+                description="COM_FROALA_COLOR_THEME_DESC"
+                class="btn-group"
+                default="gray"
+                >
+            <option value="gray">Gray</option>
+            <option value="dark">Dark</option>
+            <option value="red">Red</option>
+            <option value="royal">Royal</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="additional" label="COM_FROALA_ADDITIONAL_FIELDSET">
+        <field
+                name="inlineStyles"
+                type="textarea"
+                label="COM_FROALA_INLINESTYLES"
+                description="COM_FROALA_INLINESTYLES_DESC"
+                class="inputbox"
+                cols="100"
+                rows="10"
+                default="'Big Red':: 'font-size: 20px; color: red;', 'Small Blue':: 'font-size: 14px; color: blue;'"
+                />
+        <field
+                name="blockStyles"
+                type="textarea"
+                label="COM_FROALA_BLOCKSTYLES"
+                description="COM_FROALA_BLOCKSTYLES_DESC"
+                class="inputbox"
+                cols="100"
+                rows="10"
+                default="h1:: muted, h1:: text-warning, p:: muted, p:: text-warning"
+                />
+        <field
+                name="iconClasses"
+                type="textarea"
+                label="COM_FROALA_ICONCLASSES"
+                description="COM_FROALA_ICONCLASSES_DESC"
+                class="inputbox"
+                cols="100"
+                rows="10"
+                default="fa-, glyphicons-, uk-"
+                />
+    </fieldset>
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC">
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                class="inputbox"
+                validate="rules"
+                filter="rules"
+                component="com_froala"
+                section="component"/>
+    </fieldset>
+</config>

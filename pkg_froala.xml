@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" method="upgrade" version="3.1">
+    <name>Froala Editor v2</name>
+    <author>Arkadiy Sedelnikov, JoomLine</author>
+	<packagename>froala_component</packagename>
+    <creationDate>26.01.2015</creationDate>
+    <copyright>Copyright (c) 2015 Arkadiy, Joomline. All rights reserved.</copyright>
+    <license>GNU/GPL v.3 or later.</license>
+	<packager>JoomLine</packager>
+	<packagerurl>http://joomline.ru</packagerurl>
+    <version>2.1</version>
+    <description>The installation package Froala editor for Joomla.</description>
+<files>
+	<file type="component" method="upgrade"  id="com_froala" client="administrator">com_froala.zip</file>
+	<file type="plugin" method="upgrade"  id="froala" group="editors" client="site">plg_editors_froala.zip</file>
+	<file type="plugin" method="upgrade"  id="froala" group="system" client="site">plg_system_froala.zip</file> 
+</files>
+</extension>
